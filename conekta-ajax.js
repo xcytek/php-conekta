@@ -16,7 +16,7 @@ function send_payment_card(){
         url: "conekta_card.php",
         data: dataString,
         success: function(resp) {           
-            $('#card').html('Thanks for your donation');
+            $('#card').html(resp);
         }
     });  
 }

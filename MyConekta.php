@@ -120,7 +120,7 @@ class MyConekta {
 
 		try {
 		  $charge = Conekta_Charge::create($data);  
-		  echo 'Gracias por tu aportacion de $'.substr($amount, 0, -2).'.00 M.N. <br /> Los miembros del CAAM te lo agradecen.';
+		  echo 'Thanks for your donation';
 		} 
 		catch (Exception $e) {
 		  // Catch all exceptions including validation errors.
