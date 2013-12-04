@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PHP-Conekta</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />		
+		<script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.2.0/js/conekta.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="conekta-ajax.js"></script>
+		<style type="text/css">
+		h1{
+			font-size: 22px;
+		}
+
+		#donations{
+			overflow: hidden;
+		}
+
+		.column{
+			width: 30%;
+			float: left;
+		}
+		</style>
+	</head>
+	<body>
+										
+	<div id="donations">
+		<!--Tarjeta -->		
+		<div class="column" id="card">
+			<h1>Tarjeta Credito/Debito</h1>
+			<form action="" method="POST" id="payment-form" > 
+				<p><input type="text" size="41" id="amount_card" placeholder="Monto" /></p>
+				<p><input type="text" size="41" length="100" id="name_card" placeholder="Nombre Completo del Tarjetahabiente" /></p>
+				<p><input type="text" size="41" length="20" id="number_card" placeholder="Numero de Tarjeta" /></p>
+				<p><input type="text" size="4" length="3" id="cvc_card" placeholder="CVC" /></p>
+				<p><input type="text" size="2" length="2" id="exp_month_card" placeholder="MM" />/<input type="text" size="4" length="2" id="exp_year_card" placeholder="YY" /></p>
+				<p><input type="button" id="submit" value="Completar Donativo" onclick="send_payment_card()"></p>
+			</form>
+		</div>		
+
+		<!-- OXXO -->		
+		<div class="column" id="oxxo">
+			<h1>OXXO</h1>
+			<form action="" method="POST" id="payment-form"> 
+				<p><input type="text" size="41" id="amount_oxxo" placeholder="Monto" /></p>
+				<p><input type="text" size="41" id="email_oxxo" placeholder="Email" /></p>
+				<p><input type="button" id="submit_oxxo" value="Generar Deposito" onclick="send_payment_oxxo()"></p>
+			</form>
+		</div>
+
+		<!--Banco-->			
+		<div class="column" id="bank">
+			<h1>Deposito Bancario</h1>
+			<form action="" method="POST" id="payment-form"> 
+				<p><input type="text" size="41" id="amount_bank" placeholder="Monto" /></p>
+				<p><input type="text" size="41" id="name_bank" placeholder="Nombre Completo" /></p>
+				<p><input type="text" size="41" id="email_bank" placeholder="Email" /></p>
+				<p><input type="text" size="41" length="10" id="phone_bank" placeholder="Telefono (Ej. 5555555555)" /></p>
+				<p><input type="text" size="41" id="bank_bank" readonly="readonly" value="Banorte" /></p>
+				<p><input type="button" id="submit" value="Generar Deposito" onclick="send_payment_bank()"></p>
+			</form>
+		</div>										
+	</div>
+											
+
+	</body>
+</html>
