@@ -4,7 +4,7 @@ require_once("conekta/lib/Conekta.php");
 
 class MyConekta {
 	
-	public static $api_key = 'key_y9ynKWz7VHExN6gA';
+	public static $api_key = 'HERE_GOES_YOUR_CONEKTA_APIKEY';
 	public static $description = 'Donation';	
 	public static $currency = 'mxn';	
 
