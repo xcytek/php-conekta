@@ -14,7 +14,6 @@ $_SESSION['token'] = MyConekta::tokengenerator();
 <html>
     <head>
 	    <title>Deposito en efectivo en <?=ucfirst($_GET['type'])?></title>
-	    <link rel="stylesheet" href="css/report.css" />
     </head>
     <body>     
     	<h1>Resumen del Deposito</h1>
@@ -65,7 +64,7 @@ $_SESSION['token'] = MyConekta::tokengenerator();
     			<tr>
     				<td>Numero de Referencia</td>
     				<td><?=$_GET['reference']?></td>
-    				<td><img src="images/logos/<?=$_GET['type']?>.png"></td>
+    				<td><img src="logos/<?=$_GET['type']?>.png"></td>
     			</tr>
     			
     		</table>
@@ -73,7 +72,7 @@ $_SESSION['token'] = MyConekta::tokengenerator();
 			<table>
     			<tr>
     				<td><img src="<?=$_GET['barcode_url']?>&height=50&width=1"></td>
-    				<td><img src="images/logos/<?=$_GET['type']?>.png"></td>
+    				<td><img src="logos/<?=$_GET['type']?>.png"></td>
     			</tr>
     			<tr>
     				<td><?='<span class="txt-left">'.$_GET['barcode'].'</span><span class="txt-right">EXP.'.$_GET['expiry_date'].'</span>'?></td>
